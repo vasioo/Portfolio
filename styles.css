@@ -1,0 +1,263 @@
+  #inner-container-for-projects ul {
+    list-style: none;
+  }
+
+  body {
+    /* background-image: url('bbg.svg');
+    background-size: cover; */
+    color: white !important; 
+  }
+  
+
+  .content p {
+    display: none;
+  }
+
+  .content .buttons-row {
+    display: none;
+  }
+
+  .content p.open {
+    display: block;
+    animation: openBook 0.5s forwards ease-in-out;
+  }
+
+  .content p.open+.buttons-row {
+    display: flex;
+    animation: openBook 0.5s forwards ease-in-out;
+  }
+
+  @keyframes openBook {
+    0% {
+      opacity: 0;
+      transform: scaleX(0) translateX(100%);
+      transform-origin: 100% 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: scaleX(1) translateX(0%);
+      transform-origin: 100% 0;
+    }
+  }
+
+  .content p {
+    opacity: 0;
+    transition: all 0.2s linear;
+    margin-bottom: 10px;
+  }
+
+  .content p.open {
+    opacity: 1;
+    transition: all 0.2s linear;
+  }
+
+  .buttons-row {
+    padding-left: 2em;
+  }
+
+  .button-row a {
+    font-size: 2.3em;
+  }
+
+.project-btn {
+  cursor: pointer;
+  font-size: 1.3em;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, #FF5733, #FFC300, #C70039) 1;
+  transition: transform 0.3s ease;
+}
+
+.project-btn:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+
+
+  :root {
+    --border-gradient-1: linear-gradient(#FF5733, #FFC300, #C70039);
+    --border-gradient-2: linear-gradient(#00A8CC, #FFEB3B, #FF5733);
+    --border-gradient-3: linear-gradient(#AB47BC, #42A5F5, #26A69A);
+    --border-gradient-4: linear-gradient(#F4511E, #FFC107, #8BC34A);
+    --border-gradient-5: linear-gradient(#E91E63, #9C27B0, #3F51B5);
+  }
+
+  .border-gradient-1 {
+    border-left: 3px solid;
+    border-image: var(--border-gradient-1) 1;
+  }
+
+  .border-gradient-2 {
+    border-left: 3px solid;
+    border-image: var(--border-gradient-2) 1;
+  }
+
+  .border-gradient-3 {
+    border-left: 3px solid;
+    border-image: var(--border-gradient-3) 1;
+  }
+
+  .border-gradient-4 {
+    border-left: 3px solid;
+    border-image: var(--border-gradient-4) 1;
+  }
+
+  .border-gradient-5 {
+    border-left: 3px solid;
+    border-image: var(--border-gradient-5) 1;
+  }
+
+  #inner-box-row {
+    border: 10px solid;
+    border-radius: 3em;
+    border-image: var(--border-gradient-1) 1;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+  }
+
+
+  @media (min-width: 992px) {
+    #inner-box-row {
+      height: 50vh !important;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    #inner-box-row {
+      height: 60vh !important;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    #inner-box-row {
+      height: 65vh !important;
+    }
+  }
+
+  @media (max-width: 418.98px) {
+    #inner-box-row {
+      height:75vh !important;
+    }
+  }
+
+  @media (max-width: 330.98px) {
+    #inner-box-row {
+      height:85vh !important;
+    }
+  }
+
+  @media (max-width: 281.98px) {
+    #inner-box-row {
+      height:100vh !important;
+    }
+  }
+  #inner-box-row::before {
+    background-color: linear-gradient(#E91E63, #9C27B0, #3F51B5);
+  }
+
+  #inner-box-row::after {
+    background-color: linear-gradient(#E91E63, #9C27B0, #3F51B5);
+  }
+
+  #socials-row {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+#email-row{
+  position: absolute;
+  bottom:10px;
+  right: 10px;
+  font-family: cursive;
+}
+
+  #socials-row img {
+    cursor: pointer;
+    width: 4em;
+    transition: transform 0.3s ease;
+  }
+
+  #socials-row img:hover {
+    transform: scale(1.1);
+  }
+
+  #inner-container-for-projects ul li {
+    padding-top: 0.7em;
+  }
+
+  #logo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #logo-img img {
+    width: 7em;
+    transition: transform 0.3s ease;
+  }
+
+  #logo-img img:hover {
+    transform: scale(1.1);
+  }
+
+  #logo-img a {
+    cursor: pointer;
+    width: 7em;
+    height: 7em;
+  }
+
+  .welcome-text {
+    font-size: 3em;
+    -webkit-background-clip: text;
+    display: inline-block;
+    animation: flowGradient 5s infinite linear;
+    font-family: "Dancing Script", cursive;
+    padding-left: 0.7em;
+  }
+
+  @keyframes flowGradient {
+    0% {
+      color: #FF5733;
+    }
+
+    25% {
+      color: #FFC300;
+    }
+
+    50% {
+      color: #C70039;
+    }
+
+    75% {
+      color: #FFC300;
+    }
+
+    100% {
+      color: #FF5733;
+    }
+  }
+
+  .link-btn {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #FF5733, #FFC300, #C70039)1;
+    transition: transform 0.3s ease;
+  }
+
+  .link-btn:hover {
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  }
+
+  .proj-title {
+    font-family: "Dancing Script", cursive;
+  }
