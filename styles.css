@@ -126,34 +126,29 @@
   }
 
   @media (max-width: 991.98px) {
+    #socials-row img{
+      width:3em !important;
+    }
+    #logo-img img{
+      width:5em !important;
+    }
     #inner-box-row {
-      height: 60vh !important;
+      height: 70vh !important;
     }
   }
 
   @media (max-width: 575.98px) {
     #inner-box-row {
-      height: 65vh !important;
+      height: 75vh !important;
     }
   }
 
-  @media (max-width: 418.98px) {
-    #inner-box-row {
-      height:75vh !important;
-    }
-  }
-
-  @media (max-width: 330.98px) {
-    #inner-box-row {
-      height:85vh !important;
-    }
-  }
-
-  @media (max-width: 281.98px) {
+  @media (max-width: 460.98px) {
     #inner-box-row {
       height:100vh !important;
     }
   }
+
   #inner-box-row::before {
     background-color: linear-gradient(#E91E63, #9C27B0, #3F51B5);
   }

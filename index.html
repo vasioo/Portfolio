@@ -29,10 +29,9 @@
     <div class="stars"></div>
     <div class="twinkling"></div>
     <div class="container" id="main-container">
-
       <div class="row align-items-center justify-content-center" style="height: 100vh; ">
-        <div class="row align-items-center justify-content-center" id="inner-box-row"
-          style="height: 50vh;position: relative;">
+        <div class="row align-items-between justify-content-between align-items-lg-center justify-content-lg-around"
+          id="inner-box-row" style="height: 50vh;position: relative;">
           <div id="logo-img">
             <a onclick="toggleProject('intro-text','Welcome.');">
               <img src="v-logo.svg">
@@ -41,12 +40,13 @@
           <div id="socials-row">
             <a href="https://github.com/vasioo/" target="_blank"><img src="github-svgrepo-com.svg" /></a>
             <a href="mailto:vaskoorakov17@gmail.com" target="_blank"><img src="email-svgrepo-com.svg" /></a>
-            <a href="https://www.linkedin.com/in/vasil-orakov-6a34a7254/" target="_blank"><img src="linkedin-svgrepo-com.svg" /></a>
+            <a href="https://www.linkedin.com/in/vasil-orakov-6a34a7254/" target="_blank"><img
+                src="linkedin-svgrepo-com.svg" /></a>
           </div>
           <div id="email-row">
             <h5>vaskoorakov17@gmail.com</h3>
           </div>
-          <div class="col-12 col-lg-5 p-5 mt-5 mt-lg-0">
+          <div class="col-12 col-lg-5 px-5 pt-5 mt-5 mt-lg-0">
             <div class="row">
               <div class="welcome-text">
                 Welcome.
@@ -55,7 +55,10 @@
             <div class="row border-gradient-1">
               <div class="content">
                 <div class="content-item" id="intro-container">
-                  <p id="intro-text" class="open mb-0 pb-0" style="padding-left:2em">I'm Vasil Orakov, a full-stack developer based in Gotse Delchev, Bulgaria. My expertise spans across various technologies, including ASP.NET for backend development, and a comprehensive understanding of frontend technologies such as HTML, CSS, JavaScript, jQuery, Bootstrap, React and more
+                  <p id="intro-text" class="open mb-0 pb-0" style="padding-left:2em">I'm Vasil Orakov, a full-stack
+                    developer based in Gotse Delchev, Bulgaria. My expertise spans across various technologies,
+                    including ASP.NET for backend development, and a comprehensive understanding of frontend
+                    technologies such as HTML, CSS, JavaScript, jQuery, Bootstrap, React and more
                   </p>
                   <div class="buttons-row justify-content-around row mt-2">
                     <a href="Vasil Orakov (1).pdf" target="blank" class="link-btn">CV</a>
@@ -105,19 +108,18 @@
               </div>
             </div>
           </div>
-          <div class="col-1"></div>
-          <div class="col-12 col-lg-5 p-5">
-            <div class="row">
-              <div class="h2 proj-title">Projects</div>
-              <div class="container" id="inner-container-for-projects">
-                <div class="project-wrapper d-flex">
-                  <a class="project-btn d-flex pt-2" onclick="toggleProject('project1','Nauka');">Nauka</a>
+          <div class="col-12 col-lg-5 px-3 pb-4 p-lg-5">
+            <div class="row justify-content-center justify-content-lg-start ">
+              <div class="h2 proj-title pb-3 pb-lg-0">Projects</div>
+              <div class="container px-0" id="inner-container-for-projects">
+                <div class="project-wrapper col-3 col-sm-2 d-lg-flex">
+                  <a class="project-btn d-flex pt-lg-2 justify-content-center justify-content-lg-start" onclick="toggleProject('project1','Nauka');">Nauka</a>
                 </div>
-                <div class="project-wrapper d-flex pt-2">
-                  <a class="project-btn d-flex" onclick="toggleProject('project2','Modum');">Modum</a>
+                <div class="project-wrapper d-lg-flex col-3 col-sm-2 pt-lg-2">
+                  <a class="project-btn d-flex justify-content-center justify-content-lg-start" onclick="toggleProject('project2','Modum');">Modum</a>
                 </div>
-                <div class="project-wrapper d-flex pt-2">
-                  <a class="project-btn d-flex" onclick="toggleProject('project3','HandBook');">HandBook</a>
+                <div class="project-wrapper d-lg-flex col-3 col-sm-2 pt-lg-2">
+                  <a class="project-btn d-flex justify-content-center justify-content-lg-start" onclick="toggleProject('project3','HandBook');">HandBook</a>
                 </div>
               </div>
             </div>
@@ -129,7 +131,28 @@
 
 </body>
 <script>
-function toggleProject(projectId, projectName) {
+window.onload = function() {
+    checkScreenWidth();
+
+    window.addEventListener('resize', checkScreenWidth);
+  };
+
+  function checkScreenWidth() {
+    var screenWidth = window.innerWidth;
+
+    var container = document.getElementById('inner-container-for-projects');
+
+    if (screenWidth >= 992) {
+      container.classList.remove('row');
+      container.classList.remove('justify-content-around');
+    } else {
+      container.classList.add('row');
+      container.classList.add('justify-content-around');
+    }
+  }
+
+
+  function toggleProject(projectId, projectName) {
     $(".content p").removeClass("open");
     $("#" + projectId).addClass("open");
     $(".welcome-text").text(projectName);
