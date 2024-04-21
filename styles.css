@@ -1,14 +1,19 @@
   #inner-container-for-projects ul {
     list-style: none;
   }
-
+head{
+  background-color: black;
+}
   body {
-    /* background-image: url('bbg.svg');
-    background-size: cover; */
+    min-height: 100dvh;
     color: white !important; 
+    margin: 0; 
+    background-color: black !important; 
   }
-  
+html{
+  background-color: black;
 
+}
   .content p {
     display: none;
   }
@@ -73,9 +78,6 @@
   transform: scale(1.1);
   text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
-
-
-
   :root {
     --border-gradient-1: linear-gradient(#FF5733, #FFC300, #C70039);
     --border-gradient-2: linear-gradient(#00A8CC, #FFEB3B, #FF5733);
